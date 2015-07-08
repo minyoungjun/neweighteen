@@ -1,0 +1,78 @@
+  /* ============================================================
+  COMMONS
+============================================================ */
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);
+
+.step {
+font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 45px;
+  color:white;
+}
+section.how {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: rgb(40, 170, 220);
+  color:white;
+
+}
+section.how.p {
+  margin-bottom: 0px !important;
+}
+section.how:last-child {
+  margin-bottom: 0;
+}
+section.how:before, section.how:after {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  content: "";
+}
+section.how:before {
+  border-top: solid 20px #fff;
+  border-right: solid 20px #fff;
+  border-left: solid 20px transparent;
+  border-bottom: solid 20px transparent;
+}
+section.how:after {
+  border-bottom: solid 20px #5b7093;
+  border-left: solid 20px #5b7093;
+  border-right: solid 20px transparent;
+  border-top: solid 20px transparent;
+}
+
+
+/* ============================================================
+  BORDER RADIUS
+============================================================ */
+.border-radius {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+.border-radius:after {
+  -webkit-border-radius: 0 0 0 10px;
+  -moz-border-radius: 0 0 0 10px;
+  -ms-border-radius: 0 0 0 10px;
+  -o-border-radius: 0 0 0 10px;
+  border-radius: 0 0 0 10px;
+}
+
+/* ============================================================
+  SHADOW
+============================================================ */
+.shadow {
+  overflow: hidden;
+}
+.shadow:after {
+  -webkit-box-shadow: -1px 1px 5px #212835;
+  -moz-box-shadow: -1px 1px 5px #212835;
+  box-shadow: -1px 1px 5px #212835;
+}
+
+

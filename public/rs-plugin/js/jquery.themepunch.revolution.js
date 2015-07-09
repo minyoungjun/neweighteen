@@ -2950,6 +2950,7 @@
 
 						});
 
+            /*
 
 						// ALL NEW SLOTS SHOULD BE SLIDED FROM THE LEFT TO THE RIGHT //
 						///////////////////////////////////////////////////////////////
@@ -2966,6 +2967,8 @@
 										   }),0);
 							mtl.add(subtl,0);
 						});
+      */
+
 			}
 
 

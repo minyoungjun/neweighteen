@@ -19,7 +19,7 @@ $(document).ready(function(){
 			$(this).closest('a').addClass('active');
 
 		});
-
+    /*
 		// Masonry
 		var $container = $('.masonry');
         $container.imagesLoaded( function() {
@@ -31,6 +31,7 @@ $(document).ready(function(){
 				masonry: { columnWidth: '.work-img', gutter: 6 }
 			});
 		});
+    */
 
 		// Trigger Resize
 		$(window).trigger("resize");

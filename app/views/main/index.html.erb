@@ -1,3 +1,13 @@
+<style>
+.term-btn {background-color:white; color:rgb(40, 170, 220); border-radius:6px; padding-left:5px; padding-right:5px;
+}
+.term-btn:hover {
+background-color:#cacaca; 
+color:white;
+}
+
+</style>
+
 <section>
 <!--
   #################################
@@ -186,7 +196,7 @@
             <li>
               <h2 class="how-font">참여 방법 안내</h2><br>
                 <section class="how border-radius">
-              <p class="step">Step 1</p><div class="step-contents">스마트폰 등으로 18초 길이의 영상을 만드세요.</div>
+                  <p class="step">Step 1</p><div class="step-contents">스마트폰 등으로 18초 길이의 영상을 만드세요.<br>(참여하시기 전에 <a href="#modal-term" data-toggle="modal" data-target="#modal-term" class="term-btn">이용규약</a>을 꼭 읽어주세요. 이를 읽지 않아서 생기는 불이익에 대해서 당사는 책임지지 않습니다.)</div>
        
             </section>
             <section class="how border-radius">
@@ -212,8 +222,8 @@
               
             </section>
             <section class="how border-radius">
-                  <p class="step">Step 3</p>
-                  영상이 첨부된 SNS 게시물에 해시태그 <strong>#18s</strong> 또는 <strong>#18seconds</strong> 를 포함해주면 <br>자동으로 접수 완료! (참여자가 많으면 실시간으로 확인이 불가능 할 수도 있습니다.)
+              <p class="step">Step 3</p>
+              영상이 첨부된 SNS 게시물에 해시태그 <strong>#18s</strong>를 붙이면 자동으로 접수가 완료됩니다. <br>(참가자가 많으면 실시간으로 확인이 불가능할 수도 있습니다) 
               
             </section>
                  
@@ -255,13 +265,28 @@
 
     전통적인 매체의 TV스타들이 세계에서 가장 조회수가 높은 18초 영상 만들기에 도전함으로써,  시대가 바라보는 것을 같이 바라보는 
     가장 트렌디한 TV 프로그램, <a href="javascript:;">#18seconds</a>
-            </p>
-        </div>
+  </p>
+
+              <div class="col-sm-14">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://18s.sbs.co.kr" data-text="#18s #18seconds" data-related="sbs18seconds" data-hashtags="18s">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="fb-like" data-href="https://18s.sbs.co.kr" data-width="350" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+              </div>
+              <div class="col-sm-14">
+<div class="fb-comments" data-href="http://18s.sbs.co.kr" data-width="350" data-numposts="5"></div>
+            </div>
+
+
+          </div>
+
+
       </div> <!-- end col -->
 
     </div> <!-- end row -->
   </div> <!-- end container -->
 </section> <!-- end intro -->
+
+
 
 <script>
 
@@ -291,6 +316,18 @@ function load_tb(){
   script.src = "https://static.tagboard.com/public/js/embedAdvanced.js";
   document.head.appendChild(script);
 }
+
+var url = document.location.toString();
+if (url.match('#')) {
+    $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
+} 
+
+// Change hash for page-reload
+$('.nav-tabs a').on('shown.bs.tab', function (e) {
+    window.location.hash = e.target.hash;
+})
+
+
 </script>
 
 

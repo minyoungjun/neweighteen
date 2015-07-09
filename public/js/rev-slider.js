@@ -3,20 +3,23 @@
 
 	$(document).ready(function(){
 
+    $(window).load(function(){
+
       var winSize = {
         width: window.innerWidth || document.body.clientWidth,
         height: window.innerHeight || document.body.clientHeight
       }
 
-      var sliderHeight = 900;
-      if (winSize.width > winSize.height){
-        sliderHeight = 500;
+      var sliderHeight = 500;
+
+      if (winSize.width < winSize.height){
+        sliderHeight = 900;
       }
 
-
 	    jQuery('.tp-banner').revolution({
+
 			delay:12000,
-			startwidth:1200,
+			startwidth:1170,
 			startheight: sliderHeight,
 			hideThumbs:10,
 
@@ -37,5 +40,6 @@
 			spinner:"spinner4"
 		});
 	});
+});
 	
 })(jQuery);

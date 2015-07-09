@@ -4596,10 +4596,10 @@
 
 									// CENTER THE CAPTION HORIZONTALLY
 									if (nextcaption.data('x')=="center" || nextcaption.data('xcenter')=='center') {
-										nextcaption.data('xcenter','center');
-										//nextcaption.data('x',(crw/2 - nextcaption.outerWidth(true)/2)/xbw+  hofs);
-										nextcaption.data('x',(crw/2 - nextcaption.outerWidth(true)/2) +  hofs);
-
+                    
+                      nextcaption.data('xcenter','center');
+                      //nextcaption.data('x',(crw/2 - nextcaption.outerWidth(true)/2)/xbw+  hofs);
+                      nextcaption.data('x',(crw/2 - nextcaption.outerWidth(true)/2) +  hofs);
 
 									}
 

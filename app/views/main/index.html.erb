@@ -8,7 +8,8 @@
     <div class="tp-banner" >
       <ul>
         <!-- SLIDE 1 -->
-        <li data-transition="fade" data-slotamount="1" data-masterspeed="1200" data-delay="7000">
+
+        <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-delay="500">
           <!-- MAIN IMAGE -->
           <img src="/upload/girl-with-mobile2.jpg"
 
@@ -25,6 +26,48 @@
           <!-- LAYERS -->
 
           <!-- LAYER NR. 1 -->
+          <div style="display:none;" class="tp-caption customin customout huge_white rs-parallaxlevel-3"
+            data-x="center"
+            data-y="center"
+            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.50;scaleY:0.50;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+            data-speed="100"
+            data-start="0"
+            data-easing="Power4.easeOut"
+            data-endeasing="Power4.easeIn"
+            data-splitout="none"
+            data-elementdelay="0.05"
+            data-endelementdelay="0.05">첫번째 공지사항
+          </div>
+
+          <!-- LAYER NR. 2 -->
+          <div style="display:none" class="tp-caption customin medium_text fadeout rs-parallaxlevel-3"
+            data-x="center"
+            data-y="center"
+            data-voffset="80"
+            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+            data-speed="100"
+            data-start="100"
+            data-easing="Power4.easeOut">
+            18초 짜리 동영상을 만들어서 <a href="#">#18seconds</a> 해쉬태그 달고 SNS에 공유!
+          </div>
+    
+        </li> <!-- end slide 1 -->
+
+
+        <li data-transition="fade" data-slotamount="1" data-masterspeed="1200" data-delay="7000">
+          <!-- MAIN IMAGE -->
+          <img src="/upload/girl-with-mobile2.jpg"
+            alt="slidebg1"
+            data-kenburns="on"
+            data-duration="36000"
+            data-ease="Linear.easeNone"
+            data-bgfit="100"
+            data-bgfitend="150"
+            >
+          <!-- LAYERS -->
+
+          <!-- LAYER NR. 1 -->
           <div class="tp-caption customin customout huge_white rs-parallaxlevel-3"
             data-x="center"
             data-y="center"
@@ -36,7 +79,8 @@
             data-endeasing="Power4.easeIn"
             data-splitout="none"
             data-elementdelay="0.05"
-            data-endelementdelay="0.05">첫번째 공지사항
+            data-endelementdelay="0.05">
+            공지사항
           </div>
 
           <!-- LAYER NR. 2 -->
@@ -46,12 +90,13 @@
             data-voffset="80"
             data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
             data-speed="500"
-            data-start="2200"
+            data-start="2600"
             data-easing="Power4.easeOut">
-            18초 짜리 동영상을 만들어서 <a href="#">#18seconds</a> 해쉬태그 달고 SNS에 공유!
+            18초 짜리 동영상을 만들어서 #18s 해쉬태그 달고 SNS에 공유!
           </div>
     
-        </li> <!-- end slide 1 -->
+
+
 
         <!-- SLIDE 2 -->
         <li data-transition="fade" data-slotamount="1" data-masterspeed="1200" data-delay="7000">
@@ -79,7 +124,7 @@
             data-splitout="none"
             data-elementdelay="0.05"
             data-endelementdelay="0.05">
-            두번째 공지사항
+            공지사항
           </div>
 
           <!-- LAYER NR. 2 -->
@@ -231,7 +276,13 @@ function resize_tb(){
 $(document).ready(function(){
   $(window).load(function(){
     load_tb();
-    setInterval(resize_tb(), 60000);
+    setInterval(resize_tb(), 1000);
+
+    setTimeout(function(){
+    
+      $(".tp-arr-allwrapper").trigger("click");
+    
+    }, 1000); 
   });
 });
 
@@ -239,9 +290,7 @@ function load_tb(){
   var script = document.createElement('script');
   script.src = "https://static.tagboard.com/public/js/embedAdvanced.js";
   document.head.appendChild(script);
-
 }
-
 </script>
 
 

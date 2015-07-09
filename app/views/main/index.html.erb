@@ -233,17 +233,15 @@ $(document).click(function(){
 });
 function resize_tb(){
 
-    if($("#masonry1").height() != $("#tagboard").height()){
-    $("#masonry1").height($("#tagboard-embed1").height());
+    if($("#masonry1").height() < $("#tagboard").height()){
+      $("#masonry1").height($("#tagboard-embed1").height());
     }
-
 }
-
 
 $(document).ready(function(){
   $(window).load(function(){
-    resize_tb();
     load_tb();
+    resize_tb();
   });
 });
 

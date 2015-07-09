@@ -197,7 +197,7 @@
       this.stopped = false;
       this.boxes = (function() {
         var j, len, ref, results;
-        ref = this.element.querySelectorAll("." + this.config.boxClass);
+        ref = $("." + this.config.boxClass);
         results = [];
         for (j = 0, len = ref.length; j < len; j++) {
           box = ref[j];

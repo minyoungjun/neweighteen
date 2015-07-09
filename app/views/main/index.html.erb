@@ -122,7 +122,6 @@
     <div class="grid masonry" id="masonry1">
 
       <div id="tagboard-embed1" class="tagboard-embed" tgb-slug="18seconds/231934" tgb-layout="grid" tgb-feed-type="default" tgb-gutter="5" tgb-toolbar="none" tgb-animation-type="default" tgb-hashtag-color="0e91ef" tgb-post-count="9" tgb-mobile-count="3"></div>
-      <script src="https://static.tagboard.com/public/js/embedAdvanced.js"></script>
 
     </div> <!-- end row -->       
   </div> <!-- end container -->
@@ -224,6 +223,7 @@
 </section> <!-- end intro -->
 
 <script>
+
 $(window).resize(function() {
   resize_tb();
   });
@@ -243,5 +243,18 @@ function resize_tb(){
 
 }
 
+$(document).ready(function(){
+  resize_tb();
+  load_tb();
+});
+
+function load_tb(){
+  var script = document.createElement('script');
+  script.src = "https://static.tagboard.com/public/js/embedAdvanced.js";
+  document.head.appendChild(script);
+
+}
 
 </script>
+
+

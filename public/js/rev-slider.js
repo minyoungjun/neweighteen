@@ -1,6 +1,5 @@
 (function($){
     "use strict";
-
 	$(document).ready(function(){
 
     $(window).load(function(){
@@ -16,7 +15,7 @@
         sliderHeight = 900;
       }
 
-	    jQuery('.tp-banner').revolution({
+	    $(".tp-banner").revolution({
 
 			delay:12000,
 			startwidth:1200,
@@ -38,7 +37,7 @@
 			touchenabled:"on",
 			onHoverStop:"off",
 			spinner:"spinner4",
-      videoJsPath:"rs-plugin/videojs/"
+      videoJsPath:"/rs-plugin/videojs/"
 		});
 	});
 });

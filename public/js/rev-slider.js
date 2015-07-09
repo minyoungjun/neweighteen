@@ -19,7 +19,7 @@
 	    jQuery('.tp-banner').revolution({
 
 			delay:12000,
-			startwidth:1170,
+			startwidth:1200,
 			startheight: sliderHeight,
 			hideThumbs:10,
 
@@ -37,7 +37,8 @@
 			
 			touchenabled:"on",
 			onHoverStop:"off",
-			spinner:"spinner4"
+			spinner:"spinner4",
+      videoJsPath:"rs-plugin/videojs/"
 		});
 	});
 });

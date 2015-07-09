@@ -6,7 +6,7 @@ $(document).ready(function(){
 
  		// Preloader
 		$('#status').fadeOut();
-		$('#preloader').delay(350).fadeOut('slow');
+		$('#preloader').fadeOut('slow');
 
 		
 		// filter items on button click

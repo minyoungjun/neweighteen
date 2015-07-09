@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>#18seconds SBS</title>
+    <title>SBS 18seconds</title>
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -35,7 +35,6 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/upload/apple-touch-icon-114x114.png">
 
   <%= stylesheet_link_tag    'application', media: 'all'%>
-
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
 
@@ -43,28 +42,28 @@
     <script src="/js/animations.js"></script> 
     <script src="/js/cooltext.min.js"></script>
     <script>
-    $(document).ready(function(){
-      $("#logo").cooltext({
-         sequence:[
-            {
-               action:"animation",
-               animation:"cool180",
-               elements:"letters",
-               speed:38,
-               stagger:91
-            }
-         ],
-         cycle:true             // cyclic sequence
-      });
+      $(document).ready(function(){
+
+        if (!(navigator.userAgent.match(/SM-T330NU/i))){
+          $("#logo").cooltext({
+             sequence:[
+                {
+                   action:"animation",
+                   animation:"cool180",
+                   elements:"letters",
+                   speed:38,
+                   stagger:91
+                }
+             ],
+             cycle:true             // cyclic sequence
+          });
+      }
   });
 
     </script>
 
 </head>
-<body>
-
-  <body data-spy="scroll" data-offset="80" data-target=".main-nav">
-
+  <body>
     <!-- Preloader -->
     <div id="preloader">
         <div id="status">&nbsp;</div>
@@ -86,7 +85,7 @@
 
           <div class="logo-light local-scroll">
             <a href="/" class="logo" style="color:#fff; font-family: 'Ubuntu';" id="logo">
-              #18seconds
+              18seconds
             </a>
           </div>
 
@@ -134,7 +133,7 @@
               </div> <!-- end socials -->
 
               <span class="copyright text-center">
-                ©2015 SBS <a href="#">#18seconds</a> |  Powered by <a href="http://tagboard.com/">Tagboard</a>
+                ©2015 SBS & SBS Contents Hub | <a href="#">#18seconds</a><%# |  Powered by <a href="http://tagboard.com/">Tagboard</a>%>
               </span>
 
             </div> <!-- end col -->

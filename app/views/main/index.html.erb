@@ -48,7 +48,7 @@
             data-speed="500"
             data-start="2200"
             data-easing="Power4.easeOut">
-            18초 짜리 동영상을 만들어서 #18seconds 해쉬태그 달고 SNS에 공유!
+            18초 짜리 동영상을 만들어서 <a href="#">#18seconds</a> 해쉬태그 달고 SNS에 공유!
           </div>
     
         </li> <!-- end slide 1 -->
@@ -110,8 +110,8 @@
     <div class="row mt-50">
       <div class="col-md-12">
         <div class="portfolio-filter">
-          <a href="#" class="filter active transition" data-filter="*">Featured</a>
-          <a href="#" class="filter transition" data-filter=".branding">Latest</a>
+          <a href="#" class="filter active transition" data-filter="*">Hot</a>
+          <a href="#" class="filter transition" data-filter=".branding">New</a>
           <a href="#" class="filter transition" data-filter=".illustration">Facebook</a>
           <a href="#" class="filter transition" data-filter=".web-design">Twitter</a>
           <a href="#" class="filter transition" data-filter=".print">Youtube</a>
@@ -141,43 +141,39 @@
             <li>
               <h2 class="how-font">참여 방법 안내</h2><br>
                 <section class="how border-radius">
-            <p class="step">Step 1</p><div class="step-contents">스마트폰 등으로 18초 길이의 영상을 만드세요.</div>
+              <p class="step">Step 1</p><div class="step-contents">스마트폰 등으로 18초 길이의 영상을 만드세요.</div>
        
-      </section>
-      <section class="how border-radius">
-            <p class="step">Step 2</p>
-                  <span style="font-size:37px;">
-                  <i class="social_facebook_circle"></i>
-                
-                
-                  <i class="social_twitter_circle"></i>
-                
-                
-                  <i class="social_instagram_circle"></i>
-                  </span>
-                <br>
-                
-                참여자의 페이스북, 트위터, 인스타그램 계정에 찍은 영상을 올려주세요.
-                
+            </section>
+            <section class="how border-radius">
+                  <p class="step">Step 2</p>
+                        <span style="font-size:37px;">
+                        <i class="social_facebook_circle"></i>
+                      
+                      
+                        <i class="social_twitter_circle"></i>
+                      
+                        </span>
+                      <br>
+                      
+                      참여자의 페이스북, 트위터 계정에 찍은 영상을 올려주세요.
 
-                <br>
-              <br>
-                  <span style="font-size:37px;">
-                  <i class="social_youtube_circle"></i>
-                  </span>
-                <br>
-              단, 유튜브에 올리신 경우에는 페이스북, 트위터, 구글플러스등 개인 SNS에 url 공유를 해주셔야 참여가 가능합니다.
-        
-      </section>
-      <section class="how border-radius">
-            <p class="step">Step 3</p>
-            영상이 첨부된 SNS 게시물에 해시태그 #18s를 포함해주면 <br>자동으로 접수 완료! (참여자가 많으면 실시간으로 확인이 안될 수도 있습니다.)
-        
-      </section>
+                      <br>
+                    <br>
+                        <span style="font-size:37px;">
+                        <i class="social_youtube_circle"></i>
+                        </span>
+                      <br>
+                    단, 유튜브에 올리신 경우에는 페이스북, 트위터, 인스타그램, 구글+ 등 개인 SNS에 url 공유를 해주셔야 참여가 가능합니다.
+              
+            </section>
+            <section class="how border-radius">
+                  <p class="step">Step 3</p>
+                  영상이 첨부된 SNS 게시물에 해시태그 <strong>#18s</strong> 또는 <strong>#18seconds</strong> 를 포함해주면 <br>자동으로 접수 완료! (참여자가 많으면 실시간으로 확인이 불가능 할 수도 있습니다.)
+              
+            </section>
                  
             </li>
 
-          
         </div>
       </div> <!-- end col -->
 
@@ -243,9 +239,12 @@ function resize_tb(){
 
 }
 
+
 $(document).ready(function(){
-  resize_tb();
-  load_tb();
+  $(window).load(function(){
+    resize_tb();
+    load_tb();
+  });
 });
 
 function load_tb(){

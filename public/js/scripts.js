@@ -108,7 +108,7 @@ $(document).ready(function(){
 
 
     // Owl Carousel
-
+/*
     var owl = $("#owl-partners");
 	owl.owlCarousel({
 
@@ -125,6 +125,7 @@ $(document).ready(function(){
 	    ],
 
 	})
+  */
 
 	// Testimonials
     var owl = $("#owl-testimonials");

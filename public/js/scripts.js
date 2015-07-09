@@ -209,7 +209,10 @@ $(document).ready(function(){
 	var docElem = document.documentElement,
 		didScroll = false,
 		changeHeaderOn = 550;
-		document.querySelector( '#back-to-top' );
+
+		/*document.querySelector( '#back-to-top' );*/
+
+
 	function init() {
 		window.addEventListener( 'scroll', function() {
 			if( !didScroll ) {

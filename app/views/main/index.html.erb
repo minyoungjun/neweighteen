@@ -119,7 +119,7 @@
       </div> <!-- end col -->
     </div> <!-- end row -->
 
-    <div class="grid masonry" id="masonry1">
+    <div class="tagboad-div" id="masonry1">
 
       <div id="tagboard-embed1" class="tagboard-embed" tgb-slug="18seconds/231934" tgb-layout="grid" tgb-feed-type="default" tgb-gutter="5" tgb-toolbar="none" tgb-animation-type="default" tgb-hashtag-color="0e91ef" tgb-post-count="9" tgb-mobile-count="3"></div>
 
@@ -220,28 +220,18 @@
 
 <script>
 
-$(window).resize(function() {
-  resize_tb();
-  });
 
-$(document).scroll(function(){
-  resize_tb();
-});
-
-$(document).click(function(){
-  resize_tb();
-});
 function resize_tb(){
 
-    if($("#masonry1").height() < $("#tagboard").height()){
-      $("#masonry1").height($("#tagboard-embed1").height());
+    if($("#masonry1").height() < $("#tagboard-embed1").height()){
+      $("#masonry1").height( $("#tagboard-embed1").height());
     }
 }
 
 $(document).ready(function(){
   $(window).load(function(){
     load_tb();
-    resize_tb();
+    setInterval(resize_tb(), 60000);
   });
 });
 

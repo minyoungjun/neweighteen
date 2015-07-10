@@ -3,9 +3,9 @@ require 'browser'
   def index
 
     if (browser.ie? || browser.ie6?)
-  
-      redirect_to "http://sbs18s.com"
-
+      if (request.host.to_s == "18s.sbs.co.kr")
+        redirect_to "http://sbs18s.com"
+      end
     end
 
   end
@@ -13,9 +13,11 @@ require 'browser'
   def notice
 
     if (browser.ie? || browser.ie6?)
-  
-      redirect_to "http://sbs18s.com"
 
+      if (request.host.to_s == "18s.sbs.co.kr")
+        redirect_to "http://sbs18s.com/notice"
+      end
+  
     end
 
     @notice = true

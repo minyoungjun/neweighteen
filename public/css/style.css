@@ -61,7 +61,7 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #0e91ef;
+  color: #28aadc;
   outline: none;
 }
 
@@ -465,7 +465,7 @@ nav ul li.active > a {
 
 .portfolio-filter a.active {
   color: #fff;
-  background-color: #0e91ef;
+  background-color: #28aadc;
 }
 
 .portfolio-filter a {
@@ -484,7 +484,7 @@ nav ul li.active > a {
 
 .portfolio-filter a:hover {
   color: #fff;
-  background-color: #0e91ef;
+  background-color: #28aadc;
 }
 
 .masonry-item {

@@ -93,11 +93,11 @@
     </div>
 
     <header id="home">
-      <div class="main-nav" role="navigation" style="background-color:rgb(40, 170, 220);">
+      <div class="main-nav" role="navigation" style="background-color:#28aadc;-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5); -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);">
 
         <nav class="nav-hide">
           <ul class="nav local-scroll">
-            <%unless @notice%><li class="active"><a href="#home">공지사항</a></li><%else%><li class="active"><a href="#home">Home</a></li><%end%>
+            <%unless @notice%><li><a href="/notice">공지사항</a></li><%else%><li><a href="/">Home</a></li><%end%>
               <li><a href="<%if @notice%>/<%end%>#realtime">실시간</a></li>
               <li><a href="<%if @notice%>/<%end%>#how">참여방법</a></li>
               <li><a href="<%if @notice%>/<%end%>#intro">18초?</a></li>

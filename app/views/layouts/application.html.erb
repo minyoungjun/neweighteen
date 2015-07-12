@@ -100,8 +100,8 @@
             <%unless @notice%><li><a href="/notice">공지사항</a></li><%else%><li><a href="/">Home</a></li><%end%>
               <li><a href="<%if @notice%>/<%end%>#realtime">실시간</a></li>
               <li><a href="<%if @notice%>/<%end%>#how">참여방법</a></li>
-              <li><a href="<%if @notice%>/<%end%>#intro">18초?</a></li>
-              <li><a href="#modal-term" data-toggle="modal" data-target="#modal-term">이용규약</a></li>
+              <li><a href="<%if @notice%>/<%end%>#intro">18초?</a></li><%#
+                  <li><a href="#modal-term" data-toggle="modal" data-target="#modal-term">이용규약</a></li>%>
           </ul>
         </nav>
 
@@ -118,7 +118,8 @@
             <a class="logo" href="<%if @notice%>/<%end%>#realtime">실시간</a>
             <a class="logo" href="<%if @notice%>/<%end%>#how">참여방법</a>
             <a class="logo" href="<%if @notice%>/<%end%>#intro">18초?</a>
-            <a class="logo" href="#modal-term"data-toggle="modal" data-target="#modal-term">이용규약</a>
+            <%#
+                <a class="logo" href="#modal-term"data-toggle="modal" data-target="#modal-term">이용규약</a>%>
           </div>
 
           <div class="navbar-toggle">

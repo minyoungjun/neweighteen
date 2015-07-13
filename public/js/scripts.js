@@ -10,15 +10,6 @@ $(document).ready(function(){
 
 		
 		// filter items on button click
-		$('.portfolio-filter').on( 'click', 'a', function(e) {
-			e.preventDefault();
-			var filterValue = $(this).attr('data-filter');
-			$container.isotope({ filter: filterValue });
-
-			$('.portfolio-filter a').removeClass('active');
-			$(this).closest('a').addClass('active');
-
-		});
     /*
 		// Masonry
 		var $container = $('.masonry');

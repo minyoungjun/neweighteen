@@ -272,8 +272,11 @@ color:white;
       <div class="col-sm-12 wow slideInUp" data-wow-duration="1.2s" data-wow-delay="0s">
         <div class="col-sm-12 text-center col-md-12">
           <h2 class="intro-heading">
-             
-            <a href="javascript:;">18초</a>?
+            <img src="/upload/eighteen_big.png"/>
+            <br>
+            <br>
+
+            <a href="javascript:;">18초?</a>
           </h2>
           <p class="subheading">
             SBS 신개념 SNS 영상 대첩! <br>
@@ -296,15 +299,18 @@ color:white;
           </p>
           <br>
 
-          <div class="col-sm-14" style="border-top:1px solid #bababa; padding-top: 25px;">
+          <div class="col-sm-14" style="border-top:1px solid #bababa; padding-top: 25px;" id="sns-share">
                   
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://18s.sbs.co.kr" data-text="#18s #18seconds" data-related="sbs18seconds" data-hashtags="18초">Tweet</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<div class="fb-like" data-href="http://18s.sbs.co.kr" data-width="350" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-              </div>
-              <div class="col-sm-14">
-<div class="fb-comments" data-href="http://18s.sbs.co.kr" data-width="350" data-numposts="5"></div>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like fb-width" data-href="http://18s.sbs.co.kr"  data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-width="<%if browser.mobile?%>350<%else%>600<%end%>"></div>
+          </div>
+
+              <div class="col-sm-14" id="sns-comment">
+                <div class="fb-comments fb-width" data-href="http://18s.sbs.co.kr"  data-numposts="5" data-width="<%if browser.mobile?%>350<%else%>600<%end%>"></div>
             </div>
+
+
 
 
           </div>

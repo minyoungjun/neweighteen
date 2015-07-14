@@ -493,11 +493,12 @@ nav ul li.active > a {
   height: auto;
   float: left;
   overflow: hidden;
+  background-color:black;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5); -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 }
 
 .work-img img {
   overflow: hidden;
-  background-color: rgba(255,255,255,1);
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
@@ -549,8 +550,6 @@ nav ul li.active > a {
 .work-description h3 {
   font-size: 16px;
   margin-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .work-description span {

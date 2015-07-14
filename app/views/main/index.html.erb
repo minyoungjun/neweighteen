@@ -183,9 +183,25 @@ color:white;
       <div id="tagboard-embed-all" class="tagboard-embed" tgb-slug="18초/233503" tgb-layout="grid" tgb-feed-type="default" tgb-gutter="5" tgb-toolbar="none" tgb-animation-type="default" tgb-hashtag-color="#28aadc" tgb-post-count="9" tgb-mobile-count="3"></div>
     </div> <!-- end row -->       
 
+    <%#
     <div class="tagboard-div" id="masonry_facebook" style="display:none;">
       <div id="tagboard-embed-facebook" class="tagboard-embed" tgb-slug="18초/233534" tgb-layout="grid" tgb-feed-type="default" tgb-gutter="5" tgb-toolbar="none" tgb-animation-type="default" tgb-hashtag-color="#28aadc" tgb-post-count="9" tgb-mobile-count="3"></div>
-    </div> <!-- end row -->       
+    </div> <!-- end row -->
+  %>
+    <div class="grid masonry tagboard-div" id="masonry_facebook" style="display:none;">
+
+            <!-- work item -->
+            
+                <div class="masonry-item web-design branding" style="margin-right:1px; margin-left:2px;">
+                  <div class="fb-video" data-href="https://www.facebook.com/thesmallestcamera/videos/1657291967837752" 
+  data-allowfullscreen="true" style="width:100%;"></div>
+                </div> <!-- end work-item -->
+
+
+          </div> <!-- end row -->     
+
+
+
 
     <div class="grid masonry tagboard-div" id="masonry_youtube" style="display:none;">
 
@@ -194,16 +210,17 @@ color:white;
             <% @youtubes.each do |tube|%>
               <%snippet = tube["snippet"]%>
               <a class="fancybox-media" href="http://www.youtube.com/watch?v=<%=tube["id"]%>">
-                <div class="masonry-item web-design branding" style="margin-right:1px; margin-left:2px;">
-                  <div class="work-img">
-                    <img src="<%=snippet["thumbnails"]["high"]["url"]%>" alt="img">              
+                
+                <div class="masonry-item web-design branding" style="margin-right:2px; margin-left:2px;">
+                  <div class="work-img" style="background-image:url('<%=snippet["thumbnails"]["high"]["url"]%>');   background-position: center;  background-repeat: no-repeat;">
+                    <img src="/upload/project_11.png" alt="img" style="background-color:none;">              
                       <div class="work-description text-center">
                         <h3><%if snippet["title"].length > 13%><%=snippet["title"][0..12]%>...<%else%><%=snippet["title"]%><%end%></h3>
                         <span><%if snippet["description"].length > 20%><%=snippet["description"][0..19]%>...<%else%><%=snippet["description"]%><%end%></span>
                       </div>
-                    </a>
                   </div>
                 </div> <!-- end work-item -->
+                
               </a>
             <%end%>
 
@@ -246,7 +263,7 @@ color:white;
             </section>
             <section class="how border-radius">
               <p class="step">Step 3</p>
-              영상이 첨부된 게시물에 해시태그 <strong>#18초를 붙이면 (유튜브는 제목에 써주세요) 자동으로 접수가 완료됩니다. 
+              영상이 첨부된 게시물에 해시태그 <strong>#18초</strong>를 붙이면 (유튜브는 제목에 써주세요) 자동으로 접수가 완료됩니다. 
             </section>
                  
             </li>

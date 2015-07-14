@@ -14,7 +14,6 @@ require 'yourub'
     Tube.all.reverse.each do |tube|
       client = Yourub::Client.new
       @youtubes << client.get(tube.video_id)
-
     end
 
   end
@@ -41,8 +40,22 @@ require 'yourub'
     render :text => "wow"
   end
 
+  def facebook
+
+  end
+
   def youtube
 
+  end
+
+  def upload_facebook
+
+    params[:code].split(/"/).each do |code|
+      puts code
+    end
+
+    render :text => "wow"
+    
   end
 
   def upload_youtube

@@ -10,7 +10,7 @@
 
 ["HOT", "NEW", "ALL", "FACEBOOK", "YOUTUBE"].each do |c_name|
 
-  category = Categoty.new
+  category = Category.new
   category.name = c_name
   category.save
 

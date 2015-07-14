@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   get '/notice' => "main#notice"
   get 'main/test'
 
+  get 'upload/facebook' => "main#facebook"
+
   get 'upload/youtube' => "main#youtube"
+  post 'process/facebook' => "main#upload_facebook"
   post 'process/youtube' => "main#upload_youtube"
   get 'youtube_uploaded/:id' => "main#youtube_uploaded"
   # The priority is based upon order of creation: first created -> highest priority.

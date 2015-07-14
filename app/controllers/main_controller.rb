@@ -9,6 +9,14 @@ require 'yourub'
       end
     end
 
+    @youtubes = Array.new
+
+    Tube.all.reverse.each do |tube|
+      client = Yourub::Client.new
+      @youtubes << client.get(tube.video_id)
+
+    end
+
   end
 
   def notice

@@ -16,6 +16,8 @@ require 'yourub'
       @youtubes << client.get(tube.video_id)
     end
 
+    @facebooks = Fbvideo.all.reverse
+
   end
 
   def notice
@@ -50,11 +52,32 @@ require 'yourub'
 
   def upload_facebook
 
+    uurl = ""
+
     params[:code].split(/"/).each do |code|
-      puts code
+
+      if code[0..2] == "htt"
+        uurl = code 
+        puts uurl
+      end
+
+      end
+    
+    fbs = Fbvideo.where(:url => uurl)
+
+    if fbs.count  == 0
+
+      fb = Fbvideo.new
+      fb.url = uurl
+      fb.video_id = uurl.split("/").last
+      fb.save
+
+    else
+
+      fb = fbs.first
     end
 
-    render :text => "wow"
+    redirect_to :action => "facebook_uploaded", :id => fb.id
     
   end
 
@@ -86,6 +109,12 @@ require 'yourub'
     @youtube = Tube.find(params[:id])
     #client = Yourub::Client.new
     #render :text => client.get(Tube.find(params[:id]).video_id).inspect
+
+  end
+
+  def facebook_uploaded
+
+    @facebook = Fbvideo.find(params[:id])
 
   end
 

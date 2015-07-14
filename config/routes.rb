@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'upload/youtube' => "main#youtube"
   post 'process/facebook' => "main#upload_facebook"
+  get 'facebook_uploaded/:id' => "main#facebook_uploaded"
+
   post 'process/youtube' => "main#upload_youtube"
   get 'youtube_uploaded/:id' => "main#youtube_uploaded"
   # The priority is based upon order of creation: first created -> highest priority.

@@ -191,11 +191,11 @@ color:white;
     <div class="grid masonry tagboard-div" id="masonry_facebook" style="display:none;">
 
             <!-- work item -->
-            
-                <div class="masonry-item web-design branding" style="margin-right:1px; margin-left:2px;">
-                  <div class="fb-video" data-href="https://www.facebook.com/thesmallestcamera/videos/1657291967837752" 
+              <%@facebooks.each do |facebook|%>
+                <div class="masonry-item web-design branding" >
+                  <div class="fb-video" data-href="<%=facebook.url%>" 
   data-allowfullscreen="true" style="width:100%;"></div>
-                </div> <!-- end work-item -->
+                </div> <!-- end work-item --><%end%>
 
 
           </div> <!-- end row -->     
@@ -211,7 +211,7 @@ color:white;
               <%snippet = tube["snippet"]%>
               <a class="fancybox-media" href="http://www.youtube.com/watch?v=<%=tube["id"]%>">
                 
-                <div class="masonry-item web-design branding" style="margin-right:2px; margin-left:2px;">
+                <div class="masonry-item web-design branding" >
                   <div class="work-img" style="background-image:url('<%=snippet["thumbnails"]["high"]["url"]%>');   background-position: center;  background-repeat: no-repeat;">
                     <img src="/upload/project_11.png" alt="img" style="background-color:none;">              
                       <div class="work-description text-center">

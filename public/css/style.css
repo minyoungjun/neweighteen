@@ -489,7 +489,8 @@ nav ul li.active > a {
 
 .masonry-item {
   margin-top: 6px; 
-  width: 33%;
+  width: 32%;
+  margin-left:4px;
   height: auto;
   float: left;
   overflow: hidden;

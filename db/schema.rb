@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20150714125813) do
     t.datetime "updated_at",  null: false
   end
 
+  add_index "fbvideos", ["url"], name: "index_fbvideos_on_url", unique: true
+
   create_table "tubes", force: :cascade do |t|
     t.string   "video_id"
     t.integer  "category_id"

@@ -1,0 +1,27 @@
+<section class="section-wrap blog-standard blog-article">
+  <div class="container relative">
+    <div class="row">
+      
+      <!-- content -->
+      <div class="col-md-10 col-md-offset-1">
+
+        <!-- gallery post -->
+        <div class="entry-item mb0">
+          <div class="entry">             
+
+            <div class="comment-form mt-70">
+              <h3 class="text-center mb-30">Facebook에 올린 동영상에서 '동영상 퍼기기'를 누르면 자동생성되는 '코드' 또는 동영상의 URL을 아래에 입력하세요.</h3>
+              <form id="form" method="post" action="/process/facebook">
+                <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+                <input type="text" class="form-control" placeholder='<div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, "script", "facebook-jssdk"));</script><div class="fb-video" data-allowfullscreen="1" data-href="https://www.facebook.com/thesmallestcamera/videos/1657291967837752/"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/thesmallestcamera/videos/1657291967837752/"><a href="https://www.facebook.com/thesmallestcamera/videos/1657291967837752/"></a><p>#18초 테스트중</p>Posted by <a href="#" role="button">오학준</a> on 2015년 7월 13일 월요일</blockquote></div></div>' required name="code"> 
+                <input type="submit" class="btn btn-large btn-pink" value="참여신청" >
+                </form>
+            </div>    
+          </div> <!-- end entry -->
+        </div> <!-- end entry item -->
+        
+      </div> <!-- end col -->
+
+    </div> <!-- end row -->
+  </div> <!-- end container -->
+</section> <!-- end blog single -->

@@ -1,0 +1,31 @@
+<section class="section-wrap blog-standard blog-article">
+  <div class="container relative">
+    <div class="row">
+      
+      <!-- content -->
+      <div class="col-md-10 col-md-offset-1">
+
+        <!-- gallery post -->
+        <div class="entry-item mb0">
+          <div class="entry">             
+            <div class="entry-title" style="text-align:center;">
+              <h2>
+                다음 Youtube 영상이 등록되었습니다.
+              </h2>
+            </div>
+            <div class="entry-content">
+              <iframe <%if browser.mobile?%>width="350" height="198"<%else%>width="560" height="315"<%end%>  src="https://www.youtube.com/embed/<%=@youtube.video_id%>?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+              <br>
+
+              <a href="/upload/youtube"> 
+                <div class="btn btn-large btn-pink" >더 올리기</div>
+              </a>
+            </div> <!-- end entry content -->
+          </div> <!-- end entry -->
+        </div> <!-- end entry item -->
+        
+      </div> <!-- end col -->
+
+    </div> <!-- end row -->
+  </div> <!-- end container -->
+</section> <!-- end blog single -->

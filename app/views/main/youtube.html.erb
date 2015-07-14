@@ -1,0 +1,27 @@
+<section class="section-wrap blog-standard blog-article">
+  <div class="container relative">
+    <div class="row">
+      
+      <!-- content -->
+      <div class="col-md-10 col-md-offset-1">
+
+        <!-- gallery post -->
+        <div class="entry-item mb0">
+          <div class="entry">             
+
+            <div class="comment-form mt-70">
+              <h3 class="text-center mb-30">Youtube의 URL로 참여신청</h3>
+              <form id="form" method="post" action="/process/youtube">
+                <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+                <input type="text" class="form-control" placeholder="Website" required name="url"> 
+                <input type="submit" class="btn btn-large btn-pink" value="참여신청" >
+                </form>
+            </div>    
+          </div> <!-- end entry -->
+        </div> <!-- end entry item -->
+        
+      </div> <!-- end col -->
+
+    </div> <!-- end row -->
+  </div> <!-- end container -->
+</section> <!-- end blog single -->

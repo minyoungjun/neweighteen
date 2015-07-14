@@ -2,6 +2,11 @@ Rails.application.routes.draw do
 
   root 'main#index'
   get '/notice' => "main#notice"
+  get 'main/test'
+
+  get 'upload/youtube' => "main#youtube"
+  post 'process/youtube' => "main#upload_youtube"
+  get 'youtube_uploaded/:id' => "main#youtube_uploaded"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

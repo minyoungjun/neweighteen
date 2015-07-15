@@ -1,6 +1,10 @@
 class MainController < ApplicationController
-require 'browser'
-require 'yourub'
+  require 'browser'
+  require 'yourub'
+
+
+  before_filter :is_login, :except => ["index", "notice"]
+
   def index
 
     if (browser.ie? || browser.ie6?)

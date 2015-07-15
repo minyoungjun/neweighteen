@@ -4,25 +4,47 @@
       
       <!-- content -->
       <div class="col-md-10 col-md-offset-1">
+        <div class="entry-comments mt-70">
+          <h3 class="text-center mb-30">올렸던 Youtube 영상 관리자</h3>
+          <ul class="comment-list">
+            <%@youtubes.each do |tube|%>
+              <%snippet = tube["snippet"]%>
+              <li>
+                <div class="comment-body">
+                  <img src="<%=snippet["thumbnails"]["high"]["url"]%>" class="comment-avatar" alt="img" style="width:80px;border-radius:0px;-webkit-border-radius:0px;">
+                  <div class="comment-content">
+                    <h6 class="comment-author"><%=snippet["title"]%></h6>
+                    <p class="mb-10"><%=snippet["description"]%></p>
+                    <a href="#"class="btn" style="background-color:#28aadc; color:white;">보이기</a>
+                    <a href="#"class="btn" style="background-color:#e91e63; color:white;">숨기기</a>
+                    <a href="#"class="btn" style="background-color:#151515; color:white;">삭제</a>
+                  </div>
+                </div>
+              </li> <!-- end 1-2 comment -->
+            <%end%>
+          </ul> <!-- end comment list -->           
+        </div>
 
-        <!-- gallery post -->
-        <div class="entry-item mb0">
-          <div class="entry">             
-            <div class="entry-title" style="text-align:center;">
-              <h2>
-                올렸던 Youtube 영상 관리자
-              </h2>
-            </div>
-            <div class="entry-content">
-              <iframe <%if browser.mobile?%>width="350" height="198"<%else%>width="560" height="315"<%end%>  src="https://www.youtube.com/embed/<%=@youtube.video_id%>?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-              <br>
 
-              <a href="/upload/youtube"> 
-                <div class="btn btn-large btn-pink" >더 올리기</div>
-              </a>
-            </div> <!-- end entry content -->
-          </div> <!-- end entry -->
-        </div> <!-- end entry item -->
+        <div class="entry-comments mt-70">
+          <h3 class="text-center mb-30">올렸던 Facebook 영상 관리자</h3>
+          <ul class="comment-list">
+            <%@facebooks.each do |facebook|%>
+              <li>
+                <div class="comment-body">
+                  <div class="comment-content" style="padding-left:0;">
+                  <div class="fb-video" data-href="<%=facebook.url%>" 
+  data-allowfullscreen="true" data-width="200"></div>
+                    <a href="#"class="btn" style="background-color:#28aadc; color:white;">보이기</a>
+                    <a href="#"class="btn" style="background-color:#e91e63; color:white;">숨기기</a>
+                    <a href="#"class="btn" style="background-color:#151515; color:white;">삭제</a>
+                  </div>
+                </div>
+              </li> <!-- end 1-2 comment -->
+            <%end%>
+          </ul> <!-- end comment list -->           
+        </div>
+
         
       </div> <!-- end col -->
 

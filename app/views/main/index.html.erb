@@ -193,8 +193,11 @@ color:white;
             <!-- work item -->
               <%@facebooks.each do |facebook|%>
                 <div class="masonry-item web-design branding" >
-                  <div class="fb-video" data-href="<%=facebook.url%>" 
-  data-allowfullscreen="true" style="width:100%;"></div>
+
+                  <div class="work-img">
+                    <img src="/upload/project_fb.png" alt="img" style="display:none">              
+                    <div class="fb-video" data-href="<%=facebook.url%>"  data-allowfullscreen="true" style="width:100%;"></div>
+                  </div>
                 </div> <!-- end work-item --><%end%>
 
 

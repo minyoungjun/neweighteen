@@ -4,6 +4,8 @@ class CreateTubes < ActiveRecord::Migration
 
       t.string  :video_id
       t.integer :category_id
+      t.boolean :hided, default: false
+      t.integer :sort_number
 
       t.timestamps null: false
     end

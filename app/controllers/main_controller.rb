@@ -72,6 +72,9 @@ require 'yourub'
       fb.video_id = uurl.split("/").last
       fb.save
 
+      fb.sort_number = fb.id
+      fb.save
+
     else
 
       fb = fbs.first
@@ -95,6 +98,8 @@ require 'yourub'
     if tube_array.count == 0
       youtube = Tube.new
       youtube.video_id = youtube_id
+      youtube.save
+      youtube.sort_number = youtube.id
       youtube.save
     else
       youtube = tube_array.first

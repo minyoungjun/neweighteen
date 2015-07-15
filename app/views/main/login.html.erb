@@ -1,0 +1,27 @@
+<section class="section-wrap blog-standard blog-article">
+  <div class="container relative">
+    <div class="row">
+      
+      <!-- content -->
+      <div class="col-md-10 col-md-offset-1">
+
+        <!-- gallery post -->
+        <div class="entry-item mb0">
+          <div class="entry">             
+
+            <div class="comment-form mt-70">
+              <h3 class="text-center mb-30">패스워드를 입력하세요.</h3>
+              <form id="form" method="post" action="/password">
+                <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+                <input type="password" class="form-control" placeholder="password" required name="password"> 
+                <input type="submit" class="btn btn-large btn-pink" value="로그인" >
+                </form>
+            </div>    
+          </div> <!-- end entry -->
+        </div> <!-- end entry item -->
+        
+      </div> <!-- end col -->
+
+    </div> <!-- end row -->
+  </div> <!-- end container -->
+</section> <!-- end blog single -->

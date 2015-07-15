@@ -29,8 +29,10 @@ ActiveRecord::Schema.define(version: 20150715024956) do
     t.string   "video_id"
     t.string   "url"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "hided",       default: false
+    t.integer  "sort_number"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   add_index "fbvideos", ["url"], name: "index_fbvideos_on_url", unique: true
@@ -38,8 +40,10 @@ ActiveRecord::Schema.define(version: 20150715024956) do
   create_table "tubes", force: :cascade do |t|
     t.string   "video_id"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "hided",       default: false
+    t.integer  "sort_number"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   add_index "tubes", ["video_id"], name: "index_tubes_on_video_id", unique: true

@@ -123,6 +123,35 @@ require 'yourub'
 
   end
 
+  def password
+
+    if (params[:password] == Admin.last.password)
+
+      session[:admin] = true
+
+      redirect_to :action => "admin"
+
+    else
+
+      session[:admin] = false
+
+      redirect_to :action => "login"
+    end
+
+  end
+
+  def admin
+
+    @youtubes = Array.new
+
+    Tube.all.reverse.each do |tube|
+      client = Yourub::Client.new
+      @youtubes << client.get(tube.video_id)
+    end
+
+    @facebooks = Fbvideo.all.reverse
+
+  end
 
 
 end

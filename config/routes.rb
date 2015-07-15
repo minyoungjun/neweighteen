@@ -12,6 +12,12 @@ Rails.application.routes.draw do
 
   post 'process/youtube' => "main#upload_youtube"
   get 'youtube_uploaded/:id' => "main#youtube_uploaded"
+
+  get '/login' => "main#login"
+  post '/password' => "main#password"
+
+  get '/admin' => "main#admin"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

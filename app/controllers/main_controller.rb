@@ -15,12 +15,12 @@ class MainController < ApplicationController
 
     @youtubes = Array.new
 
-    Tube.all.reverse.each do |tube|
+    Tube.where(:hided => false).reverse.each do |tube|
       client = Yourub::Client.new
       @youtubes << client.get(tube.video_id)
     end
 
-    @facebooks = Fbvideo.all.reverse
+    @facebooks = Fbvideo.where(:hided => false).reverse
 
   end
 
@@ -37,6 +37,7 @@ class MainController < ApplicationController
     @notice = true
 
   end
+
   def test
 
     client = Yourub::Client.new
@@ -148,12 +149,42 @@ class MainController < ApplicationController
 
     @youtubes = Array.new
 
-    Tube.all.reverse.each do |tube|
-      client = Yourub::Client.new
-      @youtubes << client.get(tube.video_id)
-    end
+    @youtubes = Tube.all.reverse
 
     @facebooks = Fbvideo.all.reverse
+
+  end
+
+  def delete
+    if params[:platform] == "youtube"
+      Tube.find(params[:id]).delete
+    else
+      Fbvideo.find(params[:id]).delete
+    end
+    redirect_to :action => "admin"
+  end
+
+  def toggle
+
+    if params[:platform] == "youtube"
+      tube = Tube.find(params[:id])
+      if tube.hided
+        tube.hided = false
+      else
+        tube.hided = true
+      end
+      tube.save
+    else
+      fb = Fbvideo.find(params[:id])
+
+      if fb.hided
+        fb.hided = false
+      else
+        fb.hided = true
+      end
+      fb.save
+    end
+    redirect_to :action => "admin"
 
   end
 

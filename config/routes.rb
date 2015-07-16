@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
   get '/admin' => "main#admin"
 
+  get 'toggle/:platform/:id' => "main#toggle"
+  get 'delete/:platform/:id' => "main#delete"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

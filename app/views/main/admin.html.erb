@@ -7,7 +7,10 @@
         <div class="entry-comments mt-70">
           <h3 class="text-center mb-30">올렸던 Youtube 영상 관리자</h3>
           <ul class="comment-list">
-            <%@youtubes.each do |tube|%>
+            <%@youtubes.each do |youtube|%>
+
+              <%client = Yourub::Client.new%>
+              <%tube = client.get(youtube.video_id)%>
               <%snippet = tube["snippet"]%>
               <li>
                 <div class="comment-body">
@@ -15,14 +18,18 @@
                   <div class="comment-content">
                     <h6 class="comment-author"><%=snippet["title"]%></h6>
                     <p class="mb-10"><%=snippet["description"]%></p>
-                    <a href="#"class="btn" style="background-color:#28aadc; color:white;">보이기</a>
-                    <a href="#"class="btn" style="background-color:#e91e63; color:white;">숨기기</a>
-                    <a href="#"class="btn" style="background-color:#151515; color:white;">삭제</a>
+
+                  <%if youtube.hided%>
+                    <a href="/toggle/youtube/<%=youtube.id%>"class="btn" style="background-color:#28aadc; color:white;">보이기</a>
+                  <%else%>
+                    <a href="/toggle/youtube/<%=youtube.id%>"class="btn" style="background-color:#e91e63; color:white;">숨기기</a>
+                  <%end%>
+                  <a href="/delete/youtube/<%=youtube.id%>"class="btn" style="background-color:#151515; color:white;">삭제</a>
                   </div>
                 </div>
               </li> <!-- end 1-2 comment -->
             <%end%>
-          </ul> <!-- end comment list -->           
+          </ul> <!-- end comment list -->        
         </div>
 
 
@@ -34,10 +41,13 @@
                 <div class="comment-body">
                   <div class="comment-content" style="padding-left:0;">
                   <div class="fb-video" data-href="<%=facebook.url%>" 
-  data-allowfullscreen="true" data-width="200"></div>
-                    <a href="#"class="btn" style="background-color:#28aadc; color:white;">보이기</a>
-                    <a href="#"class="btn" style="background-color:#e91e63; color:white;">숨기기</a>
-                    <a href="#"class="btn" style="background-color:#151515; color:white;">삭제</a>
+                    data-allowfullscreen="true" data-width="200"></div>
+                  <%if facebook.hided%>
+                    <a href="/toggle/facebook/<%=facebook.id%>"class="btn" style="background-color:#28aadc; color:white;">보이기</a>
+                  <%else%>
+                    <a href="/toggle/facebook/<%=facebook.id%>"class="btn" style="background-color:#e91e63; color:white;">숨기기</a>
+                  <%end%>
+                  <a href="/delete/facebook/<%=facebook.id%>"class="btn" style="background-color:#151515; color:white;">삭제</a>
                   </div>
                 </div>
               </li> <!-- end 1-2 comment -->

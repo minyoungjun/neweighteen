@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def is_login
 
-    unless session[:admin]
+    unless session[:admin] == "true"
       redirect_to "/login"
     end
 

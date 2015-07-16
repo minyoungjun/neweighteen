@@ -3,7 +3,7 @@ class MainController < ApplicationController
   require 'yourub'
 
 
-  before_filter :is_login, :except => ["index", "notice", "login"]
+  before_filter :is_login, :except => ["index", "notice", "login", "password"]
 
   def index
 
@@ -129,15 +129,15 @@ class MainController < ApplicationController
 
   def password
 
-    if (params[:password] == Admin.last.password)
+    if (params[:password].to_s == Admin.last.password)
 
-      session[:admin] = true
+      session[:admin] = "true"
 
       redirect_to :action => "admin"
 
     else
 
-      session[:admin] = false
+      session[:admin] = "false"
 
       redirect_to :action => "login"
     end

@@ -18,6 +18,7 @@ class MainController < ApplicationController
     Tube.where(:hided => false).reverse.each do |tube|
       client = Yourub::Client.new
       @youtubes << client.get(tube.video_id)
+      puts client.get(tube.video_id)["statistics"]["viewCount"]
     end
 
     @facebooks = Fbvideo.where(:hided => false).reverse

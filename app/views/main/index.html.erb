@@ -162,16 +162,16 @@ color:white;
     <div class="row mt-50">
       <div class="col-md-12">
         <div class="portfolio-filter">
-          <a href="javascript:;" class="filter active transition" data-fil="hot" data-filter=".print">Hot</a>
-          <a href="javascript:;" class="filter transition" data-fil="new" data-filter=".print">New</a>
-          <a href="javascript:;" class="filter transition" data-fil="all" data-filter=".print">All</a>
-          <a href="javascript:;" class="filter transition" data-filter=".print" data-fil="facebook">Facebook</a>
+          <a href="javascript:;" class="filter active transition" data-filter=".print" data-fil="facebook">Facebook</a>
           <a href="javascript:;" class="filter transition" data-fil="youtube" data-filter=".print">Youtube</a>
+          <a href="javascript:;" class="filter transition" data-fil="all" data-filter=".print">BUZZ</a>
+          <a href="javascript:;" class="filter transition" data-fil="hot" data-filter=".print">Hot</a>
+          <a href="javascript:;" class="filter transition" data-fil="new" data-filter=".print">New</a>
         </div> <!-- end filter -->
       </div> <!-- end col -->
     </div> <!-- end row -->
 
-    <div class="tagboard-div" id="masonry_hot">
+    <div class="tagboard-div" id="masonry_hot"style="display:none;">
       <div id="tagboard-embed-hot" class="tagboard-embed" tgb-slug="18초/233533" tgb-layout="grid" tgb-feed-type="default" tgb-gutter="5" tgb-toolbar="none" tgb-animation-type="default" tgb-hashtag-color="#28aadc" tgb-post-count="9" tgb-mobile-count="3"></div>
     </div> <!-- end row -->       
 
@@ -188,7 +188,7 @@ color:white;
       <div id="tagboard-embed-facebook" class="tagboard-embed" tgb-slug="18초/233534" tgb-layout="grid" tgb-feed-type="default" tgb-gutter="5" tgb-toolbar="none" tgb-animation-type="default" tgb-hashtag-color="#28aadc" tgb-post-count="9" tgb-mobile-count="3"></div>
     </div> <!-- end row -->
   %>
-    <div class="grid masonry tagboard-div" id="masonry_facebook" style="display:none;">
+    <div class="grid masonry tagboard-div" id="masonry_facebook" >
 
             <!-- work item -->
               <%@facebooks.each do |facebook|%>

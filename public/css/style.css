@@ -216,7 +216,7 @@ p {
 }
 
 .main-nav.sticky .logo {
-  height: 70px;
+  height: 60px;
 }
 
 @media (min-width: 768px) {

@@ -154,6 +154,23 @@ color:white;
 </section>
 %>
 
+
+<section class="section-wrap" style="padding-bottom:0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="fb-video" data-href="<%=@facebooks.last.url%>"  data-allowfullscreen="true" style="width:100%;"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h4  style="font-weight:400; color:#EB3472;">#실시간 #뜨는 #영상 #18초</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="section-wrap" id="realtime">
   <div class="container">
     <h2 class="text-center" style="font-weight:400;"><img src="/upload/big_logo.png"/></h2>
@@ -172,6 +189,7 @@ color:white;
       </div> <!-- end col -->
     </div> <!-- end row -->
 
+    <%#
     <div class="tagboard-div" id="masonry_hot"style="display:none;">
       <div id="tagboard-embed-hot" class="tagboard-embed" tgb-slug="18초/233533" tgb-layout="grid" tgb-feed-type="default" tgb-gutter="5" tgb-toolbar="none" tgb-animation-type="default" tgb-hashtag-color="#28aadc" tgb-post-count="9" tgb-mobile-count="3"></div>
     </div> <!-- end row -->       
@@ -183,7 +201,8 @@ color:white;
     <div class="tagboard-div" id="masonry_all" style="display:none;">
       <div id="tagboard-embed-all" class="tagboard-embed" tgb-slug="18초/233503" tgb-layout="grid" tgb-feed-type="default" tgb-gutter="5" tgb-toolbar="none" tgb-animation-type="default" tgb-hashtag-color="#28aadc" tgb-post-count="9" tgb-mobile-count="3"></div>
     </div> <!-- end row -->       
-
+  
+  %>
     <%#
     <div class="tagboard-div" id="masonry_facebook" style="display:none;">
       <div id="tagboard-embed-facebook" class="tagboard-embed" tgb-slug="18초/233534" tgb-layout="grid" tgb-feed-type="default" tgb-gutter="5" tgb-toolbar="none" tgb-animation-type="default" tgb-hashtag-color="#28aadc" tgb-post-count="9" tgb-mobile-count="3"></div>
@@ -361,7 +380,7 @@ function load_tb(){
   s.type = "text/javascript"
   s.src = "https://static.tagboard.com/public/js/embedAdvanced.js";
 
-  $('head').append(s);
+  <%# $('head').append(s);%>
 
 }
 

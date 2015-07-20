@@ -23,7 +23,12 @@ class MainController < ApplicationController
       end
     end
 
-    @facebooks = Fbvideo.where(:hided => false).reverse
+    if browser.mobile?
+      @facebooks = Fbvideo.where(:hided => false).reverse[0..2]
+      @youtubes = @youtubes[0..2]
+    else
+      @facebooks = Fbvideo.where(:hided => false).reverse
+    end
 
   end
 

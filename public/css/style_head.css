@@ -12,7 +12,7 @@ section.how {
   position: relative;
   margin-bottom: 40px;
   padding: 20px;
-  background-color: rgb(40, 170, 220);
+  background-color: #EB3472;
   color:white;
 
 }
@@ -38,8 +38,8 @@ section.how:before {
   border-bottom: solid 20px transparent;
 }
 section.how:after {
-  border-bottom: solid 20px #5b7093;
-  border-left: solid 20px #5b7093;
+  border-bottom: solid 20px #A4244F;
+  border-left: solid 20px #A4244F;
   border-right: solid 20px transparent;
   border-top: solid 20px transparent;
 }

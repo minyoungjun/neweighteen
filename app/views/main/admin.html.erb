@@ -11,23 +11,25 @@
 
               <%client = Yourub::Client.new%>
               <%tube = client.get(youtube.video_id)%>
-              <%snippet = tube["snippet"]%>
-              <li>
-                <div class="comment-body">
-                  <img src="<%=snippet["thumbnails"]["high"]["url"]%>" class="comment-avatar" alt="img" style="width:80px;border-radius:0px;-webkit-border-radius:0px;">
-                  <div class="comment-content">
-                    <h6 class="comment-author"><%=snippet["title"]%></h6>
-                    <p class="mb-10"><%=snippet["description"]%></p>
+              <%if tube != nil%>
+                <%snippet = tube["snippet"]%>
+                <li>
+                  <div class="comment-body">
+                    <img src="<%=snippet["thumbnails"]["high"]["url"]%>" class="comment-avatar" alt="img" style="width:80px;border-radius:0px;-webkit-border-radius:0px;">
+                    <div class="comment-content">
+                      <h6 class="comment-author"><%=snippet["title"]%></h6>
+                      <p class="mb-10"><%=snippet["description"]%></p>
 
-                  <%if youtube.hided%>
-                    <a href="/toggle/youtube/<%=youtube.id%>"class="btn" style="background-color:#28aadc; color:white;">보이기</a>
-                  <%else%>
-                    <a href="/toggle/youtube/<%=youtube.id%>"class="btn" style="background-color:#e91e63; color:white;">숨기기</a>
-                  <%end%>
-                  <a href="/delete/youtube/<%=youtube.id%>"class="btn" style="background-color:#151515; color:white;">삭제</a>
+                    <%if youtube.hided%>
+                      <a href="/toggle/youtube/<%=youtube.id%>"class="btn" style="background-color:#28aadc; color:white;">보이기</a>
+                    <%else%>
+                      <a href="/toggle/youtube/<%=youtube.id%>"class="btn" style="background-color:#e91e63; color:white;">숨기기</a>
+                    <%end%>
+                    <a href="/delete/youtube/<%=youtube.id%>"class="btn" style="background-color:#151515; color:white;">삭제</a>
+                    </div>
                   </div>
-                </div>
-              </li> <!-- end 1-2 comment -->
+                </li> <!-- end 1-2 comment -->
+              <%end%>
             <%end%>
           </ul> <!-- end comment list -->        
         </div>

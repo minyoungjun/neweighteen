@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/notice' => "main#notice"
   get 'main/test'
 
+  get 'main/fb_load_api'
+
   get 'upload/facebook' => "main#facebook"
 
   get 'upload/youtube' => "main#youtube"

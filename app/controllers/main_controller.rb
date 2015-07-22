@@ -5,6 +5,11 @@ class MainController < ApplicationController
 
   before_filter :is_login, :except => ["index", "notice", "login", "password"]
 
+  def fb_load_api
+
+
+  end
+
   def index
 
     if (browser.ie? || browser.ie6?)

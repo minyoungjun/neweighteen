@@ -168,11 +168,11 @@ color:white;
         <h4  style="font-weight:400; color:#EB3472;">#이경규를이겨라 #18초</h4>
       </div>
     </div>
-    <br><br>
+    <br>
 
     <div class="row">
       <div class="col-md-6 col-sm-10 col-md-offset-0 col-sm-offset-1">
-        <div class="fb-video" data-href="https://www.facebook.com/gotengkr/videos/926542247404514/"  data-allowfullscreen="true" style="width:100%;"></div>
+        <div class="fb-video" data-href="https://www.facebook.com/xhlrud/videos/853254318091285/"  data-allowfullscreen="true" style="width:100%;"></div>
       </div>
       <div class="col-md-6 col-sm-10 col-md-offset-0 col-sm-offset-1">
         <div class="fb-video" data-href="https://www.facebook.com/1661435850751072/videos/1677249315836392/"  data-allowfullscreen="true" style="width:100%;"></div>
@@ -225,15 +225,20 @@ color:white;
   %>
     <div class="grid masonry tagboard-div" id="masonry_facebook" data-load="6">
 
-            <!-- work item -->
-              <%@facebooks[0..5].each do |facebook|%>
-                <div class="masonry-item web-design branding" >
+      <!-- work item -->
+      <%count_num = 0%>
+      <%@facebooks.each do |facebook|%>
+        <%count_num = count_num + 1%>
+        <div class="masonry-item web-design branding" id = "facebook_<%=count_num%>" <%if count_num > 6%>style="display:none;"<%end%>>
 
                   <div class="work-img">
                     <img src="/upload/project_fb.png" alt="img" style="display:none">              
                     <div class="fb-video" data-href="<%=facebook.url%>"  data-allowfullscreen="true" style="width:100%; height:100%;"></div>
                   </div>
                 </div> <!-- end work-item --><%end%>
+
+
+            <div id="fb_load" class="btn col-md-10 col-md-offset-1" style="margin-top:20px; background-color:#f5f5f5;" data-load="6" >Load More</div>
 
 
           </div> <!-- end row -->     
@@ -277,7 +282,6 @@ color:white;
         <div class="col-sm-12 text-center col-md-12">
 
         <ul id="tab">
-            
             <li>
               <h2 class="how-font">참여 방법 안내</h2><br>
               <!--
@@ -349,7 +353,7 @@ color:white;
                   
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://18s.sbs.co.kr" data-text="#18s #18seconds" data-related="sbs18seconds" data-hashtags="18초">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                <div class="fb-like fb-width" data-href="http://18s.sbs.co.kr"  data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-width="<%if browser.mobile?%>350<%else%>600<%end%>"></div>
+                <div class="fb-like fb-width" data-href="https://www.facebook.com/sbs18s"  data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-width="<%if browser.mobile?%>350<%else%>600<%end%>"></div>
           </div>
 
               <div class="col-sm-14" id="sns-comment">
@@ -399,26 +403,20 @@ function load_tb(){
 
 }
 
-function load_more_fb(){
-  var h = {}; 
-  <%6.upto(@facebooks.count - 1) do |fb|%>
-    h['<%=fb%>'] = "<%=@facebooks[fb].url%>";
-  <%end%>
+$("#fb_load").click(function(){
+  var load_num = $("#fb_load").data("load") + 1;
+  var all_count = <%=@facebooks.count%>;
 
-  var load_num = $("#masonry_facebook").data("load");
+  for(i = 0; i < 3; i++){
+    if (load_num <= all_count){
+      $("#facebook_" + load_num).show();
+      load_num = load_num + 1;
+    }
+  }
 
-  $("#masonry_facebook").append('<div class="masonry-item web-design branding" ><div class="work-img"><img src="/upload/project_fb.png" alt="img" style="display:none"><div class="fb-video" data-href="' + h[load_num] + '"  data-allowfullscreen="true" style="width:100%; height:100%;"></div></div></div>");');
+  $("#fb_load").data("load", load_num);
 
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.4&appId=571970066269489";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-
-}
+});
 
 var url = document.location.toString();
 if (url.match('#')) {

@@ -415,6 +415,15 @@ function load_tb(){
 }
 
 $("#fb_load").click(function(){
+
+  load_function();
+});
+
+$('#fb_load').bind( "touchstart", function(e){load_function()} );
+
+
+function load_function(){
+
   var load_num = $("#fb_load").data("load") + 1;
   var all_count = <%=@facebooks.count%>;
 
@@ -427,7 +436,7 @@ $("#fb_load").click(function(){
 
   $("#fb_load").data("load", load_num);
 
-});
+}
 
 var url = document.location.toString();
 if (url.match('#')) {

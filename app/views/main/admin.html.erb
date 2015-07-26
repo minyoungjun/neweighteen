@@ -2,8 +2,34 @@
   <div class="container relative">
     <div class="row">
       
+      <%= paginate @facebooks %>
       <!-- content -->
       <div class="col-md-10 col-md-offset-1">
+
+        <div class="entry-comments mt-70">
+          <h3 class="text-center mb-30">올렸던 Facebook 영상 관리자<a href="/upload/facebook">(새로 올리기)</a></h3>
+          <ul class="comment-list">
+            <%@facebooks.each do |facebook|%>
+              <li>
+                <div class="comment-body">
+                  <div class="comment-content" style="padding-left:0;">
+                  <div class="fb-video" data-href="<%=facebook.url%>" 
+                    data-allowfullscreen="true" data-width="200"></div>
+                  <%if facebook.hided%>
+                    <a href="/toggle/facebook/<%=facebook.id%>"class="btn" style="background-color:#28aadc; color:white;">보이기</a>
+                  <%else%>
+                    <a href="/toggle/facebook/<%=facebook.id%>"class="btn" style="background-color:#e91e63; color:white;">숨기기</a>
+                  <%end%>
+                  <a href="/delete/facebook/<%=facebook.id%>"class="btn" style="background-color:#151515; color:white;">삭제</a>
+                  </div>
+                </div>
+              </li> <!-- end 1-2 comment -->
+            <%end%>
+          </ul> <!-- end comment list -->           
+        </div>
+
+
+
         <div class="entry-comments mt-70">
           <h3 class="text-center mb-30">올렸던 Youtube 영상 관리자<a href="/upload/youtube">(새로 올리기)</a></h3>
           <ul class="comment-list">
@@ -35,30 +61,10 @@
         </div>
 
 
-        <div class="entry-comments mt-70">
-          <h3 class="text-center mb-30">올렸던 Facebook 영상 관리자<a href="/upload/facebook">(새로 올리기)</a></h3>
-          <ul class="comment-list">
-            <%@facebooks.each do |facebook|%>
-              <li>
-                <div class="comment-body">
-                  <div class="comment-content" style="padding-left:0;">
-                  <div class="fb-video" data-href="<%=facebook.url%>" 
-                    data-allowfullscreen="true" data-width="200"></div>
-                  <%if facebook.hided%>
-                    <a href="/toggle/facebook/<%=facebook.id%>"class="btn" style="background-color:#28aadc; color:white;">보이기</a>
-                  <%else%>
-                    <a href="/toggle/facebook/<%=facebook.id%>"class="btn" style="background-color:#e91e63; color:white;">숨기기</a>
-                  <%end%>
-                  <a href="/delete/facebook/<%=facebook.id%>"class="btn" style="background-color:#151515; color:white;">삭제</a>
-                  </div>
-                </div>
-              </li> <!-- end 1-2 comment -->
-            <%end%>
-          </ul> <!-- end comment list -->           
-        </div>
 
         
       </div> <!-- end col -->
+      <%= paginate @facebooks %>
 
     </div> <!-- end row -->
   </div> <!-- end container -->

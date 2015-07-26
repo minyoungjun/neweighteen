@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+
+gem 'kaminari'
 gem 'browser'
 gem 'yourub'
 gem 'mysql2'

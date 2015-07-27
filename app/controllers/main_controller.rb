@@ -70,16 +70,16 @@ class MainController < ApplicationController
 
   def upload_facebook
 
-    uurl = ""
+    array = Array.new
 
     params[:code].split(/"/).each do |code|
 
       if code[0..2] == "htt"
-        uurl = code 
-        puts uurl
+        array <<  code 
       end
-
-      end
+      
+    end
+    uurl = array[0]
     
     fbs = Fbvideo.where(:url => uurl)
 

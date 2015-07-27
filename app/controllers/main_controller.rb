@@ -160,9 +160,9 @@ class MainController < ApplicationController
 
   def admin
 
-    @youtubes = Tube.all.reverse.page params[:page]
+    @youtubes = Tube.order(:id).reverse.page params[:page]
 
-    @facebooks = Fbvideo.all.reverse.page params[:page]
+    @facebooks = Fbvideo.order(:id).reverse.page params[:page]
 
   end
 

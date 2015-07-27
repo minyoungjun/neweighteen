@@ -20,7 +20,7 @@ class MainController < ApplicationController
 
     @youtubes = Array.new
 
-    Tube.where(:hided => false).reverse.each do |tube|
+    Tube.where(:hided => false).each do |tube|
       client = Yourub::Client.new
       youtube = client.get(tube.video_id)
       if youtube != nil
@@ -29,10 +29,10 @@ class MainController < ApplicationController
     end
 
     if browser.mobile?
-      @facebooks = Fbvideo.where(:hided => false).reverse[0..2]
+      @facebooks = Fbvideo.where(:hided => false)[0..2]
       @youtubes = @youtubes[0..2]
     else
-      @facebooks = Fbvideo.where(:hided => false).reverse
+      @facebooks = Fbvideo.where(:hided => false)
     end
 
   end

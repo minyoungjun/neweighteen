@@ -159,9 +159,9 @@ class MainController < ApplicationController
   end
 
   def admin
-    @youtubes = Tube.order('id' => :desc).page params[:page]
+    @youtubes = Tube.order('created_at' => :desc).page params[:page]
 
-    @facebooks = Fbvideo.order('id' => :desc).page params[:page]
+    @facebooks = Fbvideo.order('created_at' => :desc).page params[:page]
 
   end
 

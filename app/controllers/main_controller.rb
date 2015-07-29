@@ -3,7 +3,7 @@ class MainController < ApplicationController
   require 'yourub'
 
 
-  before_filter :is_login, :except => ["index", "notice", "login", "password"]
+#  before_filter :is_login, :except => ["index", "notice", "login", "password"]
 
   def fb_load_api
 

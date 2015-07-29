@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'main#index'
+  root 'main#index2'
+=begin
   get '/notice' => "main#notice"
   get 'main/test'
 
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
 
   get 'toggle/:platform/:id' => "main#toggle"
   get 'delete/:platform/:id' => "main#delete"
+=end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

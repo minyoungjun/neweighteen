@@ -287,8 +287,8 @@
   <body>
 
 <div id="fb-root"></div>
+<%#
 <script>
-
 var winSize = {
   width: window.innerWidth || document.body.clientWidth,
   height: window.innerHeight || document.body.clientHeight
@@ -316,7 +316,7 @@ if (winSize.width < winSize.height){
 }(document, 'script', 'facebook-jssdk'));
 
 </script>
-
+%>
 
     <header id="home">
       <div class="main-nav" role="navigation" style="background-color:#EB3472;-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5); -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);">
@@ -337,26 +337,32 @@ if (winSize.width < winSize.height){
             <a href="/" class="logo"  id="logo">
               <img src="/upload/small_logo2.svg" style="width:35px;"/>
             </a>
+
+          </div>
+          
+
+          <div class="local-scroll" style="float:right;">
+
             <a class="logo" style="color:#fff;" target='_blank' href="https://www.facebook.com/sbs18s"><i style=" margin-left:20px;" class="fa fa-facebook"></i></a>
                 <a  class="logo" style="color:#fff;" target='_blank' href="https://twitter.com/sbs18seconds"><i style="margin-left:20px;" class="fa fa-twitter"></i></a>
                 <a class="logo" style="color:#fff;" target='_blank' href="https://www.youtube.com/channel/UCh-walbyMy4t3jhKOlhf60A"><i style="margin-left:20px;" class="fa fa-youtube fa-google-plus"></i></a>
 
-            </a>
-          </div>
-
-          <div class="logo-light navbar-fix local-scroll" style="float:right;">
+          <!--
             <%unless @notice%><a class="logo" href="/notice">공지사항</a><%else%><a class="logo" href="/">Home</a><%end%>
             <a class="logo" href="<%if @notice%>/<%end%>#realtime">실시간</a>
             <a class="logo" href="<%if @notice%>/<%end%>#how">참여방법</a>
             <a class="logo" href="<%if @notice%>/<%end%>#intro">18초?</a>
             <a class="logo" href="#modal-term"data-toggle="modal" data-target="#modal-term">이용규약</a>
+            -->
           </div>
 
+<%#
           <div class="navbar-toggle">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
           </div>
+          %>
 
         </div> <!-- end container -->
       </div> <!-- end main nav -->
@@ -369,7 +375,7 @@ if (winSize.width < winSize.height){
 
 
     <!-- Footer -->
-      <footer id="footer" class="minimal" >
+      <footer id="footer" class="minimal" style="background-color:#fafafa;">
         <div class="container">
           <div class="row">
             <div class="col-md-4 col-md-offset-4">
@@ -379,6 +385,7 @@ if (winSize.width < winSize.height){
                   <img src="/upload/sbs_small.png" alt="">
                 </a>
               </div>
+              <%#
 
               <div class="socials">
                 <a  target='_blank' href="https://www.facebook.com/sbs18s"><i class="fa fa-facebook"></i></a>
@@ -386,6 +393,7 @@ if (winSize.width < winSize.height){
                 <a target='_blank' href="https://www.youtube.com/channel/UCh-walbyMy4t3jhKOlhf60A"><i class="fa fa-youtube fa-google-plus"></i></a>
                 <a target='_blank' href="https://instagram.com/sbs18seconds"><i class="fa fa-instagram"></i></a>
               </div> <!-- end socials -->
+            %>
 
               <span class="copyright text-center">
                 ©2015 SBS & SBS Contents Hub | <a href="#">#18초</a><%# |  Powered by <a href="http://tagboard.com/">Tagboard</a>%>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'main#index2'
+  get 'main/index'
 =begin
   get '/notice' => "main#notice"
   get 'main/test'
